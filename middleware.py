@@ -2,8 +2,9 @@ import pandas as pd
 import spacy
 
 from spacy.lang.en.stop_words import STOP_WORDS
-
-nlp = spacy.load("en_core_web_sm")
+import en_core_web_sm
+nlp = en_core_web_sm.load()
+# nlp = spacy.load("en_core_web_sm")
 from nltk.stem import PorterStemmer
 stemmer = PorterStemmer()
 
