@@ -23,7 +23,7 @@ def punct(text):
 def ner_recog(text):
     doc = nlp(text)
 
-    ner_text = pd.DataFrame([[ent.text,ent.label_]] for ent in doc.ents])
+    ner_text = pd.DataFrame([[ent.text,ent.label_] for ent in doc.ents])
     return ner_text
 
 def lemmatization(text):
