@@ -18,7 +18,7 @@ if st.sidebar.button("Show Entire Analysis"):
         st.markdown(no_stopwords)
 
     with col2:
-        st.title("Punctuation")
+        st.title("No Punctuation")
         no_punct = middleware.punct(text)
         st.markdown(no_punct)
 
@@ -46,15 +46,15 @@ if st.sidebar.button("Show Entire Analysis"):
 st.text("Specific Pre-processing of Text")
 if st.button("Remove Stop Words"):
     no_stopwords = middleware.stop_words(text)
-    st.text(no_stopwords)
+    st.markdown(no_stopwords)
 
 if st.button("Remove Punctuation"):
     no_punct = middleware.punct(text)
-    st.text(no_punct)
+    st.markdown(no_punct)
 
 if st.button("Name Entity Recognition"):
     ner = middleware.ner_recog(text)
-    st.text(ner)
+    st.markdown(ner)
 
 if st.button("Lemma of Text"):
     lemma = middleware.lemmatization(text)
