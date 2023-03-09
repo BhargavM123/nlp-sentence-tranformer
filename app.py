@@ -26,7 +26,7 @@ if st.sidebar.button("Show Entire Analysis"):
     with col1:
         st.title("Name & Entity")
         ner = middleware.ner_recog(text)
-        st.markdown(ner)
+        st.dataframe(ner)
 
     with col2:
         st.title("Lemmatization")
@@ -54,7 +54,7 @@ if st.button("Remove Punctuation"):
 
 if st.button("Name Entity Recognition"):
     ner = middleware.ner_recog(text)
-    st.markdown(ner)
+    st.dataframe(ner)
 
 if st.button("Lemma of Text"):
     lemma = middleware.lemmatization(text)
